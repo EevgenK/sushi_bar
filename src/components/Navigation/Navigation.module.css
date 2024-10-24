@@ -1,0 +1,46 @@
+.navigation {
+  position: fixed;
+  top: 48px;
+  left: 48px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  justify-content: space-between;
+  background: var(--text-inverse);
+  border-radius: 12px;
+  padding: 8px;
+  width: 453px;
+  height: 57px;
+}
+.list {
+  display: flex;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-default);
+  gap: 4px;
+}
+
+.item {
+  padding: 12px;
+}
+.burgerBtn {
+  padding: 0;
+  width: 41px;
+  height: 41px;
+  border: 1px solid #4e4c47;
+  border-radius: 8px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.svg {
+  stroke: var(--text-default);
+  fill: var(--background-muted);
+}
+.logo {
+  color: var(--text-default);
+  text-transform: uppercase;
+}
