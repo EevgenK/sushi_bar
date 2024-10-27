@@ -1,10 +1,30 @@
 .section {
   position: relative;
+  padding: 24px;
+  display: flex;
+  gap: 16px;
+  background-color: var(--text-inverse);
+}
+.heroContainer {
+  width: 75%;
+  padding-top: 25%;
+  padding-left: 1%;
+  border-radius: 16px;
   background-image: linear-gradient(
       rgba(47, 48, 58, 0.4),
       rgba(47, 48, 58, 0.4)
     ),
     url(../../assets/img/main_bg.jpg);
   background-repeat: no-repeat;
-  background-position: center;
+
+  background-size: contain;
+}
+.title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 140px;
+  line-height: 100%;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: var(--text-default);
 }
