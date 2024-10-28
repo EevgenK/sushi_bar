@@ -1,15 +1,10 @@
+import BurgerBtn from "./BurgerBtn/BurgerBtn";
 import s from "./Navigation.module.css";
-import clsx from "clsx";
-import sprite from "../../assets/img/sprite.svg";
-console.log(sprite);
+
 const Navigation = () => {
   return (
     <nav className={s.navigation}>
-      <button className={s.burgerBtn}>
-        <svg className={s.svg} width="41" height="41">
-          <use href={clsx(sprite + "#icon-icon-menu")}></use>
-        </svg>
-      </button>
+      <BurgerBtn />
       <a className={s.logo} href="">
         Qitchen
       </a>

@@ -1,7 +1,7 @@
 .list {
   display: flex;
   flex-direction: column;
-  width: 25%;
+
   gap: 15px;
 }
 .item {
@@ -107,4 +107,59 @@
 }
 .btn:hover .icon {
   transform: rotate(360deg);
+}
+@media screen and (min-device-pixel-ratio: 2),
+  (min-resolution: 192dpi),
+  (min-resolution: 2dppx) {
+  .item {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.6),
+        rgba(47, 48, 58, 0.6)
+      ),
+      url(../../../assets/img/menu_img2x.jpg);
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../../assets/img/menu_img2x.jpg);
+    }
+  }
+  .item:nth-child(2) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.6),
+        rgba(47, 48, 58, 0.6)
+      ),
+      url(../../../assets/img/reservation_img2x.jpg);
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../../assets/img/reservation_img2x.jpg);
+    }
+  }
+  .item:nth-child(3) {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.6),
+        rgba(47, 48, 58, 0.6)
+      ),
+      url(../../../assets/img/restaurant_img2x.jpg);
+    &:hover,
+    &:focus {
+      background-image: linear-gradient(
+          rgba(47, 48, 58, 0.4),
+          rgba(47, 48, 58, 0.4)
+        ),
+        url(../../../assets/img/restaurant_img2x.jpg);
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .list {
+    width: 25%;
+  }
 }

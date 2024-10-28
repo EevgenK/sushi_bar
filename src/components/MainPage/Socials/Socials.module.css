@@ -2,13 +2,12 @@
   display: flex;
   gap: 8px;
   border-radius: 24px 0 0 0;
-  padding: 24px 16px 16px 24px;
-  width: 164px;
-  height: 76px;
+  padding: 12px;
+
   background-color: var(--background-default);
-  color: var(--text-default);
 }
 .item {
+  color: var(--text-default);
   border: 1px solid var(--border-default);
   border-radius: 500px;
   width: 36px;
@@ -16,6 +15,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  transition: border var(--animation-mode);
+  &:hover,
+  &:focus {
+    border: 2px solid var(--text-default);
+  }
 }
 .item > a {
   display: flex;
@@ -23,4 +27,9 @@
 }
 .icon {
   width: 14px;
+}
+@media (min-width: 1280px) {
+  .list {
+    padding: 24px 16px 16px 24px;
+  }
 }

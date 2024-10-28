@@ -2,16 +2,16 @@
   position: relative;
   padding: 24px;
   display: flex;
+  flex-direction: column;
   gap: 16px;
   background-color: var(--text-inverse);
 }
 .heroContainer {
-  width: 75%;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   align-items: flex-end;
-
+  height: 334px;
   padding-left: 2%;
   border-radius: 16px;
   background-image: linear-gradient(
@@ -26,10 +26,23 @@
 .title {
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 140px;
-  line-height: 100%;
+  font-size: 48px;
+  line-height: 1;
   letter-spacing: 0.02em;
   text-transform: uppercase;
   color: var(--text-default);
   margin-right: auto;
+}
+@media (min-width: 1280px) {
+  .section {
+    flex-direction: row;
+  }
+  .heroContainer {
+    width: 75%;
+    height: 100vh;
+  }
+  .title {
+    font-weight: 400;
+    font-size: 140px;
+  }
 }
