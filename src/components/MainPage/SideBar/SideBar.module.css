@@ -12,13 +12,59 @@
   height: 334px;
   border-radius: 16px 16px 0 16px;
   background-image: linear-gradient(
-      rgba(47, 48, 58, 0.4),
-      rgba(47, 48, 58, 0.4)
+      rgba(47, 48, 58, 0.6),
+      rgba(47, 48, 58, 0.6)
     ),
     url(../../../assets/img/menu_img.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: background-image var(--animation-mode);
+  cursor: pointer;
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../../assets/img/menu_img.jpg);
+  }
+}
+.item:nth-child(2) {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.6),
+      rgba(47, 48, 58, 0.6)
+    ),
+    url(../../../assets/img/reservation_img.jpg);
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../../assets/img/reservation_img.jpg);
+  }
+}
+.item:nth-child(3) {
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.6),
+      rgba(47, 48, 58, 0.6)
+    ),
+    url(../../../assets/img/restaurant_img.jpg);
+  &:hover,
+  &:focus {
+    background-image: linear-gradient(
+        rgba(47, 48, 58, 0.4),
+        rgba(47, 48, 58, 0.4)
+      ),
+      url(../../../assets/img/restaurant_img.jpg);
+  }
 }
 
 .btn {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  position: relative;
   width: fit-content;
   font-family: var(--second-family);
   font-weight: 400;
@@ -29,10 +75,36 @@
   color: var(--text-default);
   background-color: var(--text-inverse);
   border: 1px solid var(--text-inverse);
-  padding: 12px 0px 0px 24px;
+  padding: 12px 0px 0px 34px;
   border-radius: 24px 0 0 0;
+  cursor: pointer;
 }
+.btn::before {
+  content: "";
+  background-image: url(../../../assets/img/rounded_conor.svg);
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: 40%;
+  left: -24px;
+}
+.btn::after {
+  content: "";
+  background-image: url(../../../assets/img/rounded_conor.svg);
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -23px;
+  right: -1px;
+}
+
 .icon {
-  border: 1px solid red;
+  border: 1px solid var(--text-default);
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
+  transition: transform var(--animation-mode);
+}
+.btn:hover .icon {
+  transform: rotate(360deg);
 }

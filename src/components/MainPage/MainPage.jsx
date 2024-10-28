@@ -7,7 +7,10 @@ const MainPage = () => {
   return (
     <div className={s.section}>
       <div className={s.heroContainer}>
-        <h1 className={s.title}> Sushi Sensation</h1>
+        <h1 className={s.title}>
+          Sushi <br />
+          Sensation
+        </h1>
         <Socials />
       </div>
       <SideBar />
