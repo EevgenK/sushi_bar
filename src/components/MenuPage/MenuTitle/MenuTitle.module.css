@@ -6,10 +6,10 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-default);
-  margin-bottom: 28px;
+  margin: 28px 0px;
 }
 @media (min-width: 1280px) {
   .title {
-    margin-bottom: 48px;
+    margin: 48px 0px;
   }
 }
