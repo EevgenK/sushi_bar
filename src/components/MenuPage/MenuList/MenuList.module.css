@@ -1,0 +1,45 @@
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+.title {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+.item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+.img {
+  width: 100%;
+}
+.card {
+  color: var(--text-muted);
+  text-align: start;
+  font-family: var(--font-family);
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+}
+.svg {
+  margin-left: 5px;
+  width: 18px;
+}
+@media (min-width: 1280px) {
+  .item {
+    flex-direction: row;
+  }
+  .img {
+    width: 150px;
+  }
+  .title {
+    font-size: 22px;
+  }
+}

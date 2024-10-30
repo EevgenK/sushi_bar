@@ -1,9 +1,11 @@
-section {
+.section {
+  padding: 24px 0px;
+}
+.app {
+  position: relative;
   width: 100vw;
   height: 100vh;
   padding: 20px 0px;
-}
-.app {
   padding: 0px;
 }
 .container {

@@ -1,14 +1,18 @@
 import "./App.css";
 import MainPage from "./components/MainPage/MainPage";
+import MenuPage from "./components/MenuPage/MenuPage";
+
 import Navigation from "./components/Navigation/Navigation";
 import "modern-normalize";
 
 function App() {
   return (
-    <section className="app">
-      <MainPage />
+    <div className="app">
       <Navigation />
-    </section>
+      <MainPage />
+
+      <MenuPage />
+    </div>
   );
 }
 
