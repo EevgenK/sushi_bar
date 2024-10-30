@@ -4,6 +4,7 @@ import s from "./Navigation.module.css";
 import Modal from "../Modal/Modal";
 import { useState } from "react";
 import ModalList from "../Modal/ModalList/ModalList";
+import { TbArrowLeftRhombus, TbArrowRightRhombus } from "react-icons/tb";
 
 const Navigation = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -29,6 +30,10 @@ const Navigation = () => {
       </ul>
       {modalOpen && (
         <Modal close={closeModal}>
+          <div className={s.decor}>
+            <TbArrowLeftRhombus className={s.icon} />
+            <TbArrowRightRhombus className={s.icon} />
+          </div>
           <ModalList close={closeModal} />
         </Modal>
       )}

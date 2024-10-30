@@ -1,7 +1,7 @@
 .list {
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 64px;
+  font-size: 48px;
   line-height: 100%;
   text-transform: uppercase;
   text-align: center;
@@ -9,4 +9,9 @@
   display: flex;
   flex-direction: column;
   gap: 16px;
+}
+@media (min-width: 1280px) {
+  .list {
+    font-size: 64px;
+  }
 }

@@ -7,7 +7,16 @@
   text-transform: uppercase;
   color: var(--text-default);
   margin: 28px 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
 }
+.icon {
+  color: var(--text-default);
+  transform: scale(3, 1.2);
+}
+
 @media (min-width: 1280px) {
   .title {
     margin: 48px 0px;
