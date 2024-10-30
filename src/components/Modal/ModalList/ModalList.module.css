@@ -1,0 +1,12 @@
+.list {
+  font-family: var(--second-family);
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--text-default);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}

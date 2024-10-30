@@ -1,12 +1,16 @@
 import clsx from "clsx";
 import s from "./MenuPage.module.css";
-// import "../../App.css";
+
 import { maki, rolls, uramaki } from "../../assets/data/menu";
 import MenuList from "./MenuList/MenuList";
 import MenuTitle from "./MenuTitle/MenuTitle";
 import MenuHero from "./MenuHero/MenuHero";
+import { useEffect } from "react";
 
 const MenuPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <section className={clsx("section", s.menu)}>
       <MenuHero />
