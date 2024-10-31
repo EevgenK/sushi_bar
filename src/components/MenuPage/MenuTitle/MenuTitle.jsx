@@ -2,7 +2,7 @@ import s from "./MenuTitle.module.css";
 import { TbArrowLeftRhombus, TbArrowRightRhombus } from "react-icons/tb";
 const MenuTitle = ({ text }) => {
   return (
-    <h5 className={s.title}>
+    <h5 id={text} className={s.title}>
       <TbArrowLeftRhombus className={s.icon} />
       {text}
       <TbArrowRightRhombus className={s.icon} />

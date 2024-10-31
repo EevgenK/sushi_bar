@@ -12,7 +12,7 @@ const SideBar = () => {
         </button>
       </li>
       <li className={s.item}>
-        <button className={s.btn}>
+        <button onClick={() => navigate("./reservationPage")} className={s.btn}>
           Reservation <IoMdArrowForward className={s.icon} />
         </button>
       </li>

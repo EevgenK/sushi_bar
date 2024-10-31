@@ -1,11 +1,12 @@
 import clsx from "clsx";
 import s from "./MenuPage.module.css";
-
+import { useEffect } from "react";
 import { maki, rolls, uramaki } from "../../assets/data/menu";
 import MenuList from "./MenuList/MenuList";
 import MenuTitle from "./MenuTitle/MenuTitle";
 import MenuHero from "./MenuHero/MenuHero";
-import { useEffect } from "react";
+
+import MenuNavigation from "./MenuNavigation/MenuNavigation";
 
 const MenuPage = () => {
   useEffect(() => {
@@ -13,8 +14,9 @@ const MenuPage = () => {
   }, []);
   return (
     <section className={clsx("section", s.menu)}>
-      <MenuHero />
+      <MenuHero page="menu" title="menu" />
       <div className={clsx("container", s.box)}>
+        <MenuNavigation menu={["maki", "uramaki", "rolls"]} />
         <MenuTitle text="maki" />
         <MenuList dishKind={maki} />
         <MenuTitle text="uramaki" />

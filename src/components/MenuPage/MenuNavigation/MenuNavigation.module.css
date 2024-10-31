@@ -1,0 +1,21 @@
+.list {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 130%;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-default);
+}
+.item {
+  border: 1px solid var(--border-default);
+  border-radius: 8px;
+  padding: 8px 12px;
+  &:hover,
+  &:focus {
+    border: 1px solid var(--text-default);
+  }
+}

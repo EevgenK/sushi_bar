@@ -1,7 +1,7 @@
 .title {
   font-family: var(--second-family);
   font-weight: 400;
-  font-size: 32px;
+  font-size: 28px;
   line-height: 120%;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -19,6 +19,7 @@
 
 @media (min-width: 1280px) {
   .title {
+    font-size: 32px;
     margin: 48px 0px;
   }
 }

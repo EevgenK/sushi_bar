@@ -12,11 +12,17 @@
   display: flex;
   align-items: flex-end;
   height: 350px;
-  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
-    url(../../../assets/img/menu_bg.png);
-
+  border-radius: 8px;
   background-repeat: no-repeat;
   background-size: cover;
+}
+.menu {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
+    url(../../../assets/img/menu_bg.png);
+}
+.reservation {
+  background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
+    url(../../../assets/img/reservation_bg.png);
 }
 @media (min-width: 768px) {
   .title {
@@ -24,18 +30,27 @@
   }
 }
 @media (min-width: 1280px) {
-  .hero {
+  .menu {
     width: 50vw;
     position: fixed;
-    top: 0;
+    left: 16px;
+    top: 32;
+    bottom: 16px;
+    height: 100vh;
+  }
+  .reservation {
     height: 100vh;
   }
 }
 @media screen and (min-device-pixel-ratio: 2),
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
-  .hero {
+  .menu {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
       url(../../../assets/img/menu_bg2x.png);
+  }
+  .reservation {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
+      url(../../../assets/img/reservation_bg2x.png);
   }
 }
