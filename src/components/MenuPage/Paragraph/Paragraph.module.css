@@ -7,3 +7,10 @@
   color: var(--text-default);
   margin-bottom: 40px;
 }
+.order {
+  margin: 0 auto;
+  font-size: 22px;
+  @media (min-width: 768px) {
+    width: 50%;
+  }
+}

@@ -1,4 +1,4 @@
-import { NavLink, useLocation } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import BurgerBtn from "./BurgerBtn/BurgerBtn";
 import s from "./Navigation.module.css";
 import Modal from "../Modal/Modal";
@@ -23,7 +23,7 @@ const Navigation = () => {
           <a href="">about</a>
         </li>
         <li className={s.item}>
-          <a href="">book a table</a>
+          <NavLink to="./reservationPage">book a table</NavLink>
         </li>
       </ul>
       {modalOpen && (

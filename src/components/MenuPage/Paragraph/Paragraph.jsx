@@ -1,7 +1,9 @@
+import clsx from "clsx";
 import s from "./Paragraph.module.css";
+clsx;
 
-const Paragraph = ({ text }) => {
-  return <p className={s.text}>{text}</p>;
+const Paragraph = ({ children, order }) => {
+  return <p className={clsx(s.text, order && s.order)}>{children}</p>;
 };
 
 export default Paragraph;
