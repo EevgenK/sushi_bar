@@ -1,6 +1,6 @@
 import s from "./MenuList.module.css";
 import { BiLeaf } from "react-icons/bi";
-const MenuList = ({ dishKind, title }) => {
+const MenuList = ({ dishKind }) => {
   const items = [];
   dishKind.map(({ id, img, imgX, name, top, description, price }) => {
     items.push(

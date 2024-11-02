@@ -1,0 +1,20 @@
+.menu {
+  gap: 16px;
+}
+.box {
+  text-align: center;
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  padding-top: 40px;
+  padding-bottom: 80px;
+}
+@media (min-width: 1280px) {
+  .menu {
+    position: relative;
+    display: flex;
+  }
+  .box {
+    width: 50%;
+    margin: 0 0 0 auto;
+  }
+}

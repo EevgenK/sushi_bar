@@ -14,7 +14,11 @@ const ModalList = ({ close }) => {
           reservation
         </NavLink>
       </li>
-      <li>about</li>
+      <li>
+        <NavLink onClick={close} to="./about">
+          about
+        </NavLink>
+      </li>
       <li>contact</li>
       <li>blog</li>
     </ul>

@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import s from "./MenuNavigation.module.css";
 
 const MenuNavigation = ({ menu }) => {
