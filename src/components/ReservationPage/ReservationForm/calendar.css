@@ -1,0 +1,18 @@
+.calendar {
+  background-color: var(--background-muted);
+}
+.calendar .react-datepicker__header {
+  background-color: var(--background-primary);
+}
+.calendar .react-datepicker__day {
+  color: var(--text-default);
+}
+.calendar .react-datepicker__day--selected {
+  background-color: var(--text-muted);
+  color: var(--text-inverse);
+}
+
+.calendar .react-datepicker__day:hover {
+  background-color: var(--text-muted);
+  color: var(--text-inverse);
+}

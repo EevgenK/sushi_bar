@@ -8,9 +8,7 @@ import { TbArrowLeftRhombus, TbArrowRightRhombus } from "react-icons/tb";
 
 const Navigation = () => {
   const [modalOpen, setModalOpen] = useState(false);
-  const closeModal = () => {
-    setModalOpen(false);
-  };
+
   return (
     <nav className={s.navigation}>
       <BurgerBtn onClick={() => setModalOpen(true)} />
@@ -29,12 +27,12 @@ const Navigation = () => {
         </li>
       </ul>
       {modalOpen && (
-        <Modal close={closeModal}>
+        <Modal close={() => setModalOpen(false)}>
           <div className={s.decor}>
             <TbArrowLeftRhombus className={s.icon} />
             <TbArrowRightRhombus className={s.icon} />
           </div>
-          <ModalList close={closeModal} />
+          <ModalList close={() => setModalOpen(false)} />
         </Modal>
       )}
     </nav>

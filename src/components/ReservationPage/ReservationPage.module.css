@@ -10,6 +10,13 @@
   flex-direction: column;
   gap: 16px;
 }
+.decor {
+  text-align: center;
+}
+.icon {
+  color: var(--text-default);
+  transform: scale(5, 1.5);
+}
 
 @media (min-width: 1280px) {
   .menu {
@@ -17,9 +24,9 @@
     flex-direction: row;
   }
   .box {
-    width: 48%;
+    width: 50%;
     height: 100vh;
     margin: 0 0 0 auto;
-    padding: 80px;
+    padding: 40px 20px;
   }
 }
