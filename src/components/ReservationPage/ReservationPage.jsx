@@ -33,7 +33,7 @@ const ReservationPage = () => {
           <Modal close={() => setModalOpen(false)}>
             <div className={s.decor}>
               <MenuTitle text="Thank you for booking!" />
-              <Paragraph order={true}>
+              <Paragraph style="order">
                 {order.clientname}, we are waiting for you
                 {order.guests > 1 && (
                   <span> and {order.guests - 1} guests,</span>
