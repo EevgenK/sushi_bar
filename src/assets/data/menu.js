@@ -1,6 +1,7 @@
 import { imageMap, imageMapX } from "../img/maki/maki";
 import { rollsMap, rollsMapX } from "../img/rolls/rolls";
 import { uramakiMap, uramakiMapX } from "../img/uramaki/uramaki";
+
 export const maki = [
   {
     img: imageMap[1],

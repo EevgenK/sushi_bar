@@ -28,6 +28,9 @@
 .about {
   background-image: url(../../../assets/img/about_bg.png);
 }
+.contacts {
+  background-image: url(../../../assets/img/contact_bg.png);
+}
 @media (min-width: 768px) {
   .title {
     font-size: 112px;
@@ -43,7 +46,8 @@
     height: 100vh;
   }
   .reservation,
-  .about {
+  .about,
+  .contacts {
     height: 100vh;
   }
 }
@@ -61,5 +65,9 @@
   .about {
     background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
       url(../../../assets/img/about_bg2x.png);
+  }
+  .contacts {
+    background-image: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000 100%),
+      url(../../../assets/img/contact_bg2x.png);
   }
 }

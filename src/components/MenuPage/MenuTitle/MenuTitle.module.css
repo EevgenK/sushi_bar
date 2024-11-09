@@ -2,7 +2,7 @@
   font-family: var(--second-family);
   font-weight: 400;
   font-size: 28px;
-  line-height: 120%;
+  line-height: 1.2;
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: var(--text-default);
@@ -16,10 +16,20 @@
   color: var(--text-default);
   transform: scale(3, 1.2);
 }
+.contacts {
+  font-size: 24px;
+  letter-spacing: 0.04em;
+  gap: 16px;
+  justify-content: space-around;
+}
 
 @media (min-width: 1280px) {
   .title {
     font-size: 32px;
     margin: 48px 0px;
+  }
+  .contacts {
+    font-size: 24px;
+    margin: 0;
   }
 }

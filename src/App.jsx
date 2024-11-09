@@ -7,6 +7,7 @@ import Navigation from "./components/Navigation/Navigation";
 import "modern-normalize";
 import ReservationPage from "./components/ReservationPage/ReservationPage";
 import About from "./components/pages/About/About";
+import Contacts from "./components/pages/About/Contacts/Contacts";
 
 function App() {
   return (
@@ -16,7 +17,8 @@ function App() {
         <Route path="/" element={<MainPage />} />
         <Route path="/menuPage" element={<MenuPage />} />
         <Route path="/reservationPage" element={<ReservationPage />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/aboutPage" element={<About />} />
+        <Route path="/contactsPage" element={<Contacts />} />
       </Routes>
     </div>
   );

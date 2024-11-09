@@ -15,11 +15,15 @@ const ModalList = ({ close }) => {
         </NavLink>
       </li>
       <li>
-        <NavLink onClick={close} to="./about">
+        <NavLink onClick={close} to="./aboutPage">
           about
         </NavLink>
       </li>
-      <li>contact</li>
+      <li>
+        <NavLink onClick={close} to="./contactsPage">
+          contacts
+        </NavLink>
+      </li>
       <li>blog</li>
     </ul>
   );
