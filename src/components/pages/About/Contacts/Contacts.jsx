@@ -10,16 +10,30 @@ import ImageLink from "../../../shared/ImageLink/ImageLink";
 import data from "../../../../assets/data/contacts.json";
 import List from "../../../shared/List/List";
 import WorkingHoursList from "../../../WorkingHoursList/WorkingHoursList";
-const apiKey = import.meta.env.VITE_MAPTILER_KEY;
+
 import Map from "react-map-gl/maplibre";
 
 const Contacts = () => {
+  const [map, setMap] = useState();
   const [workingHours, setWorkingHours] = useState([]);
   useEffect(() => {
     fetch("./workHours.json")
       .then((response) => response.json())
       .then((data) => setWorkingHours(data.working_hours))
       .catch((error) => console.error("Error fetching the data:", error));
+  }, []);
+  useEffect(() => {
+    const getMap = async () => {
+      try {
+        const data = await fetch("http://localhost:3000/api/data").then(
+          (response) => response.json()
+        );
+        setMap(data);
+      } catch (error) {
+        console.log("Помилка:", error);
+      }
+    };
+    getMap();
   }, []);
   return (
     <section className={clsx("section", s.menu)}>
@@ -50,7 +64,7 @@ const Contacts = () => {
                 width: "100%",
                 height: 400,
               }}
-              mapStyle={`https://api.maptiler.com/maps/toner-v2/style.json?key=${apiKey}`}
+              mapStyle={map}
             />
           </div>
         </div>
