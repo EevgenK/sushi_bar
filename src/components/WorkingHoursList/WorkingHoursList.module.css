@@ -17,3 +17,8 @@
   border-bottom: 1px dashed var(--border-default);
   margin: 0 10px;
 }
+@media (min-width: 1280px) {
+  .list {
+    font-size: 18px;
+  }
+}

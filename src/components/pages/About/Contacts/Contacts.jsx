@@ -10,6 +10,8 @@ import ImageLink from "../../../shared/ImageLink/ImageLink";
 import data from "../../../../assets/data/contacts.json";
 import List from "../../../shared/List/List";
 import WorkingHoursList from "../../../WorkingHoursList/WorkingHoursList";
+const apiKey = import.meta.env.VITE_MAPTILER_KEY;
+import Map from "react-map-gl/maplibre";
 
 const Contacts = () => {
   const [workingHours, setWorkingHours] = useState([]);
@@ -37,8 +39,19 @@ const Contacts = () => {
             <MenuTitle style="contacts" text="Get in touch" />
             <WorkingHoursList items={data} />
           </div>
-          <div className={s.second}>
-            <p>will be a map</p>
+          <div className={clsx(s.second, s.map)}>
+            <Map
+              initialViewState={{
+                longitude: 30.523333,
+                latitude: 50.450001,
+                zoom: 14,
+              }}
+              style={{
+                width: "100%",
+                height: 400,
+              }}
+              mapStyle={`https://api.maptiler.com/maps/toner-v2/style.json?key=${apiKey}`}
+            />
           </div>
         </div>
       </div>

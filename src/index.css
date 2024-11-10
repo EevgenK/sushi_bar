@@ -52,3 +52,6 @@ a {
   color: inherit;
   text-decoration: none;
 }
+.maplibregl-control-container {
+  display: none;
+}
