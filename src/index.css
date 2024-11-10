@@ -1,4 +1,13 @@
+.forum-regular {
+  font-family: "Forum", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
 :root {
+  --font-family: "Satoshi", sans-serif;
+  --second-family: "Forum", sans-serif;
+
   --text-default: #efe7d2;
   --text-muted: rgba(245, 242, 234, 0.7);
   --text-inverse: #0a0b0a;
@@ -12,6 +21,7 @@
 }
 
 body {
+  font-family: var(--font-family);
   font-weight: 400;
   font-size: 24px;
   line-height: 1.23;

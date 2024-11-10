@@ -1,9 +1,32 @@
 .link {
   display: block;
   width: 100%;
-  height: 226px;
+  height: 100%;
+  position: relative;
 }
 .img {
   width: 100%;
   height: 100%;
+  transition: transform var(--animation-mode);
+}
+.icon {
+  font-size: 36px;
+  color: inherit;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--animation-mode), visibility var(--animation-mode);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.link:hover .img,
+.link:focus .img {
+  transform: scale(1.1);
+}
+.link:hover .icon,
+.link:focus .icon {
+  opacity: 1;
+  visibility: visible;
+  z-index: 1;
 }
