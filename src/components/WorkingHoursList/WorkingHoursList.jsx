@@ -1,6 +1,6 @@
-import s from "./WorkingHours.module.css";
+import s from "./WorkingHoursList.module.css";
 
-const WorkingHours = ({ items }) => {
+const WorkingHoursList = ({ items }) => {
   return (
     <ul className={s.list}>
       {items.map((item, index) => (
@@ -14,4 +14,4 @@ const WorkingHours = ({ items }) => {
   );
 };
 
-export default WorkingHours;
+export default WorkingHoursList;

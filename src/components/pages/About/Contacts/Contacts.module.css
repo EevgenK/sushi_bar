@@ -16,6 +16,10 @@
   flex-direction: column;
   gap: 16px;
   justify-content: space-around;
+  color: var(--text-default);
+}
+.reversed {
+  flex-direction: column-reverse;
 }
 .first,
 .second {
@@ -24,6 +28,9 @@
   @media (min-width: 1280px) {
     width: 47%;
   }
+}
+.reversed > .second {
+  border: 1px solid var(--border-default);
 }
 .first {
   border: 1px solid var(--border-default);
@@ -41,5 +48,8 @@
     flex-direction: row;
     margin-top: 0;
     padding-right: 16px;
+  }
+  .reversed {
+    flex-direction: row-reverse;
   }
 }
