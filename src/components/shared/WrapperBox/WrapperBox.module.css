@@ -1,0 +1,15 @@
+.wrapper {
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  padding: 40px 20px 80px;
+}
+@media (min-width: 768px) {
+  .wrapper {
+    padding: 40px 32px 80px;
+  }
+}
+@media (min-width: 1280px) {
+  .container {
+    padding-top: 0px;
+  }
+}

@@ -31,3 +31,6 @@
 .link:focus {
   color: var(--text-muted);
 }
+.about {
+  margin-top: 0;
+}

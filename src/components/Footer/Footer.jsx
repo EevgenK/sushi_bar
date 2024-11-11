@@ -1,8 +1,8 @@
 import s from "./Footer.module.css";
 
-const Footer = () => {
+const Footer = ({ style }) => {
   return (
-    <footer>
+    <footer className={s[style]}>
       <ul className={s.list}>
         <li className={s.item}>
           <a className={s.link} href="https://eevgenk.github.io/Portfolio/">

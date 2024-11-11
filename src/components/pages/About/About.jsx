@@ -25,9 +25,9 @@ const About = () => {
           img={imgSecond}
           title="Our Story"
           paragraph="Founded with a passion for culinary excellence, Qitchen's journey began in the heart of Prague. Over years, it evolved into a haven for sushi enthusiasts, celebrated for its artful mastery and devotion to redefining gastronomy."
-          direction="reverse"
+          style="reverse"
         />
-        <Footer />
+        <Footer style="about" />
       </div>
     </section>
   );

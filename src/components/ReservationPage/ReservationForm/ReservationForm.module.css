@@ -8,9 +8,6 @@
   font-size: 16px;
   line-height: 1.8;
   color: var(--text-default);
-  border: 1px solid var(--border-default);
-  border-radius: 16px;
-  padding: 20px;
 }
 .box {
   position: relative;
@@ -35,9 +32,9 @@
   color: var(--text-default);
 }
 .picker {
-  width: 280px;
+  width: 320px;
   @media (min-width: 768px) {
-    width: 660px;
+    width: 700px;
   }
   @media (min-width: 1280px) {
     width: 100%;

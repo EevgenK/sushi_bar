@@ -2,9 +2,9 @@ import Paragraph from "../../MenuPage/Paragraph/Paragraph";
 import clsx from "clsx";
 import s from "./ContentBox.module.css";
 
-const ContentBox = ({ img, paragraph, title, direction }) => {
+const ContentBox = ({ img, paragraph, title, style }) => {
   return (
-    <div className={clsx(s.box, direction === "reverse" && s.reverse)}>
+    <div className={clsx(s.box, s[style])}>
       <div className={s.first}>
         <h3 className={s.title}>{title}</h3>
         <Paragraph style="box">{paragraph}</Paragraph>

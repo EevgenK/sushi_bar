@@ -12,6 +12,8 @@ import List from "../../../shared/List/List";
 import WorkingHoursList from "../../../WorkingHoursList/WorkingHoursList";
 
 import Map from "react-map-gl/maplibre";
+import Footer from "../../../Footer/Footer";
+import ContactWrapper from "../../../ContactWrapper/ContactWrapper";
 
 const Contacts = () => {
   const [map, setMap] = useState();
@@ -39,23 +41,20 @@ const Contacts = () => {
     <section className={clsx("section", s.menu)}>
       <MenuHero page="contacts" title="contacts" />
       <div className={clsx("container", s.box)}>
-        <div className={s.wrapper}>
-          <div className={s.first}>
-            <MenuTitle style="contacts" text="Opening Hours" />
-            <WorkingHoursList items={workingHours} />
-          </div>
-          <div className={s.second}>
-            <List data={dishImages} element={ImageLink} />
-          </div>
-        </div>
-        <div className={clsx(s.wrapper, s.reversed)}>
-          <div className={s.first}>
-            <MenuTitle style="contacts" text="Get in touch" />
-            <WorkingHoursList items={data} />
-          </div>
-          <div className={clsx(s.second, s.map)}>
-            <p>here will br a map</p>
-            {/* <Map
+        <ContactWrapper
+          fristEl={<MenuTitle style="contacts" text="Opening Hours" />}
+          secondEl={<WorkingHoursList items={workingHours} />}
+          thirdEl={<List data={dishImages} element={ImageLink} />}
+        />
+        <ContactWrapper
+          style="reversed"
+          secondStyle="map"
+          fristEl={<MenuTitle style="contacts" text="Get in touch" />}
+          secondEl={<WorkingHoursList items={data} />}
+          thirdEl={<p>here will be a map</p>}
+        />
+
+        {/* <Map
               initialViewState={{
                 longitude: 30.523333,
                 latitude: 50.450001,
@@ -67,8 +66,8 @@ const Contacts = () => {
               }}
               mapStyle={map}
             /> */}
-          </div>
-        </div>
+
+        <Footer />
       </div>
     </section>
   );

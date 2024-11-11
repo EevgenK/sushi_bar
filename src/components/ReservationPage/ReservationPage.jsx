@@ -7,6 +7,7 @@ import Paragraph from "../MenuPage/Paragraph/Paragraph";
 import s from "./ReservationPage.module.css";
 import Modal from "../Modal/Modal";
 import Footer from "../Footer/Footer";
+import WrapperBox from "../shared/WrapperBox/WrapperBox";
 
 const ReservationPage = () => {
   const [order, setOrder] = useState({});
@@ -24,12 +25,14 @@ const ReservationPage = () => {
     <section className={clsx("section", s.menu)}>
       <MenuHero page="reservation" title="book a table" />
       <div className={clsx("container", s.box)}>
-        <MenuTitle text="Reservation" />
-        <Paragraph>
-          Secure your spot at Qitchen, where exceptional sushi and a remarkable
-          dining experience await.
-        </Paragraph>
-        <ReservationForm getInfo={setOrder} />
+        <WrapperBox>
+          <MenuTitle text="Reservation" />
+          <Paragraph>
+            Secure your spot at Qitchen, where exceptional sushi and a
+            remarkable dining experience await.
+          </Paragraph>
+          <ReservationForm getInfo={setOrder} />
+        </WrapperBox>
         {modalOpen && (
           <Modal close={() => setModalOpen(false)}>
             <div className={s.decor}>
