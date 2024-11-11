@@ -6,6 +6,7 @@ import MenuTitle from "../MenuPage/MenuTitle/MenuTitle";
 import Paragraph from "../MenuPage/Paragraph/Paragraph";
 import s from "./ReservationPage.module.css";
 import Modal from "../Modal/Modal";
+import Footer from "../Footer/Footer";
 
 const ReservationPage = () => {
   const [order, setOrder] = useState({});
@@ -45,6 +46,7 @@ const ReservationPage = () => {
             </div>
           </Modal>
         )}
+        <Footer />
       </div>
     </section>
   );

@@ -5,13 +5,19 @@ const Footer = () => {
     <footer>
       <ul className={s.list}>
         <li className={s.item}>
-          <a href="#">Evgen Kulbachenko</a>
+          <a className={s.link} href="https://eevgenk.github.io/Portfolio/">
+            Evgen Kulbachenko
+          </a>
         </li>
         <li className={s.item}>
-          <a href="#">SV</a>
+          <a className={s.link} href="#">
+            SV
+          </a>
         </li>
         <li className={s.item}>
-          <a href="#">GitHub</a>
+          <a className={s.link} href="https://github.com/EevgenK/sushi_bar">
+            GitHub
+          </a>
         </li>
       </ul>
     </footer>

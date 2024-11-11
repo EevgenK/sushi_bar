@@ -5,6 +5,7 @@ import ContentBox from "../../shared/ContentBox/ContentBox";
 import ProjectsList from "../../shared/ProjectsList/ProjectsList";
 import clsx from "clsx";
 import s from "./About.module.css";
+import Footer from "../../Footer/Footer";
 
 const About = () => {
   return (
@@ -26,6 +27,7 @@ const About = () => {
           paragraph="Founded with a passion for culinary excellence, Qitchen's journey began in the heart of Prague. Over years, it evolved into a haven for sushi enthusiasts, celebrated for its artful mastery and devotion to redefining gastronomy."
           direction="reverse"
         />
+        <Footer />
       </div>
     </section>
   );

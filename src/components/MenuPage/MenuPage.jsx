@@ -7,6 +7,7 @@ import MenuTitle from "./MenuTitle/MenuTitle";
 import MenuHero from "./MenuHero/MenuHero";
 
 import MenuNavigation from "./MenuNavigation/MenuNavigation";
+import Footer from "../Footer/Footer";
 
 const MenuPage = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const MenuPage = () => {
         <MenuList dishKind={uramaki} />
         <MenuTitle text="rolls" />
         <MenuList dishKind={rolls} />
+        <Footer />
       </div>
     </section>
   );

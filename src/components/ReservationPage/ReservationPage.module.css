@@ -1,9 +1,9 @@
 .box {
   text-align: center;
-  border: 1px solid var(--border-default);
-  border-radius: 16px;
+  /* border: 1px solid var(--border-default); */
+  /* border-radius: 16px;
   padding-top: 40px;
-  padding-bottom: 80px;
+  padding-bottom: 80px; */
 }
 .menu {
   display: flex;
@@ -24,9 +24,10 @@
     flex-direction: row;
   }
   .box {
-    width: 50%;
-    height: 100vh;
-    margin: 0 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 0px 16px 0px auto;
     padding: 40px 40px 0px 20px;
   }
 }

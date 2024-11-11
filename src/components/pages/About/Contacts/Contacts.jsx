@@ -22,19 +22,19 @@ const Contacts = () => {
       .then((data) => setWorkingHours(data.working_hours))
       .catch((error) => console.error("Error fetching the data:", error));
   }, []);
-  useEffect(() => {
-    const getMap = async () => {
-      try {
-        const data = await fetch("http://localhost:3000/api/data").then(
-          (response) => response.json()
-        );
-        setMap(data);
-      } catch (error) {
-        console.log("Помилка:", error);
-      }
-    };
-    getMap();
-  }, []);
+  // useEffect(() => {
+  //   const getMap = async () => {
+  //     try {
+  //       const data = await fetch("http://localhost:3000/api/data").then(
+  //         (response) => response.json()
+  //       );
+  //       setMap(data);
+  //     } catch (error) {
+  //       console.log("Помилка:", error);
+  //     }
+  //   };
+  //   getMap();
+  // }, []);
   return (
     <section className={clsx("section", s.menu)}>
       <MenuHero page="contacts" title="contacts" />
@@ -54,7 +54,8 @@ const Contacts = () => {
             <WorkingHoursList items={data} />
           </div>
           <div className={clsx(s.second, s.map)}>
-            <Map
+            <p>here will br a map</p>
+            {/* <Map
               initialViewState={{
                 longitude: 30.523333,
                 latitude: 50.450001,
@@ -65,7 +66,7 @@ const Contacts = () => {
                 height: 400,
               }}
               mapStyle={map}
-            />
+            /> */}
           </div>
         </div>
       </div>

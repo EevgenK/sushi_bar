@@ -24,7 +24,6 @@ const ModalList = ({ close }) => {
           contacts
         </NavLink>
       </li>
-      <li>blog</li>
     </ul>
   );
 };

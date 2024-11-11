@@ -1,0 +1,33 @@
+.list {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  border: 1px solid var(--border-default);
+  border-radius: 16px;
+  padding: 20px;
+  gap: 32px;
+  background-color: var(--background-default);
+}
+.item {
+  position: relative;
+}
+.list li:not(:nth-child(1))::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  top: 7px;
+  display: block;
+  width: 8px;
+  height: 8px;
+  border: 1px solid var(--border-default);
+  transform: rotate(50deg);
+}
+.link {
+  transition: color var(--animation-mode);
+}
+.link:hover,
+.link:focus {
+  color: var(--text-muted);
+}
