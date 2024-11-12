@@ -1,4 +1,4 @@
-import Paragraph from "../../MenuPage/Paragraph/Paragraph";
+import Paragraph from "../Paragraph/Paragraph";
 import clsx from "clsx";
 import s from "./ContentBox.module.css";
 

@@ -21,7 +21,10 @@ const ReservationSchema = Yup.object().shape({
     .positive("Should be positive!")
     .integer("Should be integer!"),
 
-  time: Yup.string().required("Required"),
+  time: Yup.string()
+    .required("Required")
+    .min(16.0, "We open at 16:00")
+    .min(22.0, "We close at 22:30"),
 });
 
 export default ReservationSchema;

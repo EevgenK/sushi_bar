@@ -1,4 +1,4 @@
-.menu {
+.main {
   gap: 16px;
 }
 .box {
@@ -7,11 +7,11 @@
   border-radius: 16px;
 }
 @media (min-width: 1280px) {
-  .menu {
+  .main {
     position: relative;
     display: flex;
   }
-  .box {
+  .main > .box {
     width: 48%;
     margin: 0px 16px 0px auto;
   }

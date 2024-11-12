@@ -1,8 +1,8 @@
 import clsx from "clsx";
-import MenuHero from "../../../MenuPage/MenuHero/MenuHero";
+import MenuHero from "../../../MenuHero/MenuHero";
 
 import s from "./Contacts.module.css";
-import MenuTitle from "../../../MenuPage/MenuTitle/MenuTitle";
+import MenuTitle from "../../../MenuTitle/MenuTitle";
 import { useEffect, useState } from "react";
 
 import { dishImages } from "../../../../assets/img/contacts/contacts";

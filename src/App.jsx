@@ -2,9 +2,9 @@ import { Routes, Route } from "react-router-dom";
 import { useState } from "react";
 import { TbArrowLeftRhombus, TbArrowRightRhombus } from "react-icons/tb";
 import MainPage from "./components/pages/MainPage/MainPage";
-import MenuPage from "./components/MenuPage/MenuPage";
+
 import Navigation from "./components/Navigation/Navigation";
-import ReservationPage from "./components/ReservationPage/ReservationPage";
+import ReservationPage from "./components/pages/ReservationPage/ReservationPage";
 import About from "./components/pages/About/About";
 import Contacts from "./components/pages/About/Contacts/Contacts";
 
@@ -12,6 +12,7 @@ import "modern-normalize";
 import "./App.css";
 import Modal from "./components/Modal/Modal";
 import ModalList from "./components/Modal/ModalList/ModalList";
+import MenuPage from "./components/pages/MenuPage/MenuPage";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);

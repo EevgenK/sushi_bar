@@ -1,4 +1,4 @@
-import MenuHero from "../../MenuPage/MenuHero/MenuHero";
+import MenuHero from "../../MenuHero/MenuHero";
 import imgFirst from "../../../assets/img/about_img.jpg";
 import imgSecond from "../../../assets/img/story_img.jpg";
 import ContentBox from "../../shared/ContentBox/ContentBox";

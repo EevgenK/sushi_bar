@@ -12,12 +12,15 @@ const MenuList = ({ dishKind }) => {
           className={s.img}
         />
         <div className={s.card}>
-          <h4 className={s.title}>
-            {name}
-            {top && <BiLeaf className={s.svg} />}
-          </h4>
+          <div className={s.wrapper}>
+            <h4 className={s.title}>
+              {name}
+              {top && <BiLeaf className={s.svg} />}
+            </h4>
+            <span className={s.dots} />
+            <p>{price}$</p>
+          </div>
           <p className={s.description}>{description}</p>
-          <p>Price: {price}$</p>
         </div>
       </li>
     );

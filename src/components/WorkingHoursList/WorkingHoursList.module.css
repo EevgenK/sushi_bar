@@ -13,7 +13,7 @@
 .dots {
   flex-grow: 1;
   height: 1px;
-  /* background-color: red; */
+
   border-bottom: 1px dashed var(--border-default);
   margin: 0 10px;
 }

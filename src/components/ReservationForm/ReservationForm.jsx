@@ -3,10 +3,10 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import "./calendar.css";
 import s from "./ReservationForm.module.css";
-import "../../../App.css";
-import ReservationSchema from "../../../helpers/formValidate";
+import "../../App.css";
+import ReservationSchema from "../../helpers/formValidate";
 import { useState } from "react";
-import formatedDate from "../../../helpers/formatDate";
+import formatedDate from "../../helpers/formatDate";
 
 const initialValues = {
   clientname: "",

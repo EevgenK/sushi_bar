@@ -9,9 +9,13 @@
   padding: 20px;
   gap: 32px;
   background-color: var(--background-default);
+  text-transform: uppercase;
 }
 .item {
   position: relative;
+}
+.span {
+  color: var(--border-default);
 }
 .list li:not(:nth-child(1))::before {
   content: "";
