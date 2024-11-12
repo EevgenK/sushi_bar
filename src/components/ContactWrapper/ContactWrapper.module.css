@@ -40,4 +40,8 @@
   .reversed {
     flex-direction: row-reverse;
   }
+  .first,
+  .second {
+    width: 50%;
+  }
 }

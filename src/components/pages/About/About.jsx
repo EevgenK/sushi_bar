@@ -27,7 +27,7 @@ const About = () => {
           paragraph="Founded with a passion for culinary excellence, Qitchen's journey began in the heart of Prague. Over years, it evolved into a haven for sushi enthusiasts, celebrated for its artful mastery and devotion to redefining gastronomy."
           style="reverse"
         />
-        <Footer style="about" />
+        <Footer style="margin" />
       </div>
     </section>
   );

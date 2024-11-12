@@ -49,6 +49,7 @@
   .about,
   .contacts {
     height: 100vh;
+    box-sizing: content-box;
   }
 }
 @media screen and (min-device-pixel-ratio: 2),

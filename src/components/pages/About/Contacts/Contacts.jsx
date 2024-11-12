@@ -67,7 +67,7 @@ const Contacts = () => {
           }
         />
 
-        <Footer />
+        <Footer style="margin" />
       </div>
     </section>
   );

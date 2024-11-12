@@ -1,6 +1,6 @@
 .list {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 12px;
   line-height: 1.5;
   display: flex;
   justify-content: center;
@@ -35,6 +35,11 @@
 .link:focus {
   color: var(--text-muted);
 }
-.about {
+.margin {
   margin-top: 0;
+}
+@media (max-width: 360px) {
+  .list {
+    font-size: 14px;
+  }
 }

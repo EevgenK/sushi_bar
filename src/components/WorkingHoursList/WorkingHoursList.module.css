@@ -1,6 +1,6 @@
 .list {
   font-weight: 300;
-  font-size: 14px;
+  font-size: 18px;
   line-height: 1.8;
   color: var(--text-default);
 }
@@ -19,6 +19,6 @@
 }
 @media (min-width: 1280px) {
   .list {
-    font-size: 18px;
+    font-size: 14px;
   }
 }

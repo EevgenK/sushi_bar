@@ -23,7 +23,7 @@
   .box {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     margin: 0px 16px 0px auto;
   }
 }
