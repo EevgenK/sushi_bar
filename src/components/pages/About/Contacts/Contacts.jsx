@@ -18,25 +18,27 @@ import ContactWrapper from "../../../ContactWrapper/ContactWrapper";
 const Contacts = () => {
   const [map, setMap] = useState();
   const [workingHours, setWorkingHours] = useState([]);
+  const API_KEY = import.meta.env.VITE_API_KEY;
+
   useEffect(() => {
     fetch("./workHours.json")
       .then((response) => response.json())
       .then((data) => setWorkingHours(data.working_hours))
       .catch((error) => console.error("Error fetching the data:", error));
   }, []);
-  // useEffect(() => {
-  //   const getMap = async () => {
-  //     try {
-  //       const data = await fetch("http://localhost:3000/api/data").then(
-  //         (response) => response.json()
-  //       );
-  //       setMap(data);
-  //     } catch (error) {
-  //       console.log("Помилка:", error);
-  //     }
-  //   };
-  //   getMap();
-  // }, []);
+  useEffect(() => {
+    const getMap = async () => {
+      try {
+        const data = await fetch(
+          `https://api.maptiler.com/maps/toner-v2/style.json?key=${API_KEY}`
+        ).then((response) => response.json());
+        setMap(data);
+      } catch (error) {
+        console.log("Помилка:", error);
+      }
+    };
+    getMap();
+  }, []);
   return (
     <section className={clsx("section", s.menu)}>
       <MenuHero page="contacts" title="contacts" />
@@ -51,10 +53,8 @@ const Contacts = () => {
           secondStyle="map"
           fristEl={<MenuTitle style="contacts" text="Get in touch" />}
           secondEl={<WorkingHoursList items={data} />}
-          thirdEl={<p>here will be a map</p>}
-        />
-
-        {/* <Map
+          thirdEl={
+            <Map
               initialViewState={{
                 longitude: 30.523333,
                 latitude: 50.450001,
@@ -65,7 +65,9 @@ const Contacts = () => {
                 height: 400,
               }}
               mapStyle={map}
-            /> */}
+            />
+          }
+        />
 
         <Footer />
       </div>
