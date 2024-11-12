@@ -1,4 +1,4 @@
-function formatedDate(date) {
+export function formatedDate(date) {
   const options = {
     weekday: "long",
     year: "numeric",
@@ -7,4 +7,12 @@ function formatedDate(date) {
   };
   return date.toLocaleDateString("en-US", options);
 }
-export default formatedDate;
+
+export const formattedTime = (time) => {
+  if (!time) return "";
+
+  const hours = time.getHours().toString().padStart(2, "0");
+  const minutes = time.getMinutes().toString().padStart(2, "0");
+
+  return `${hours}:${minutes}`;
+};

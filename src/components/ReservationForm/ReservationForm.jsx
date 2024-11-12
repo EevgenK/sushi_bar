@@ -6,7 +6,7 @@ import s from "./ReservationForm.module.css";
 import "../../App.css";
 import ReservationSchema from "../../helpers/formValidate";
 import { useState } from "react";
-import formatedDate from "../../helpers/formatDate";
+import { formatedDate, formattedTime } from "../../helpers/formatDate";
 
 const initialValues = {
   clientname: "",
@@ -19,9 +19,11 @@ const initialValues = {
 
 const ReservationForm = ({ getInfo }) => {
   const [selectedDate, setSelectedDate] = useState(null);
+  const [selectedTime, setSelectedTime] = useState(null);
   const handleSubmit = (values, actions) => {
     getInfo(values);
     setSelectedDate(null);
+    setSelectedTime(null);
     actions.resetForm();
   };
 
@@ -97,7 +99,27 @@ const ReservationForm = ({ getInfo }) => {
               type="time"
               name="time"
               placeholder="Time"
-            />
+            >
+              {() => (
+                <DatePicker
+                  selected={selectedTime}
+                  onChange={(time) => {
+                    setSelectedTime(time);
+                    setFieldValue("time", formattedTime(time));
+                  }}
+                  showTimeSelect
+                  showTimeSelectOnly
+                  timeIntervals={30}
+                  timeCaption="Time"
+                  dateFormat="HH:mm"
+                  timeFormat="HH:mm"
+                  placeholderText="Choose time"
+                  className={s.time}
+                  minTime={new Date().setHours(9, 0)}
+                  maxTime={new Date().setHours(23, 30)}
+                />
+              )}
+            </Field>
             <ErrorMessage className={s.error} name="time" component="span" />
           </div>
           <button className={s.btn} type="submit">

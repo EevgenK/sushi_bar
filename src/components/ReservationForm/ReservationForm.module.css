@@ -22,7 +22,8 @@
 }
 
 .field,
-.picker {
+.picker,
+.time {
   border: 1px solid var(--border-default);
   border-radius: 10px;
   padding: 16px 24px;
@@ -31,7 +32,8 @@
   background: var(--background-muted);
   color: var(--text-default);
 }
-.picker {
+.picker,
+.time {
   width: 320px;
   @media (min-width: 768px) {
     width: 700px;
