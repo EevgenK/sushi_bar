@@ -7,8 +7,8 @@ const instance = axios.create({
   },
 });
 
-export const getMapApi = async (query, page = 1) => {
+export const getMapApi = async () => {
   const response = await instance.get("maps/toner-v2/style.json");
-
+  console.log(import.meta.env.VITE_API_KEY);
   return response;
 };
