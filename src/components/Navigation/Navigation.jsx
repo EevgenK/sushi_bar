@@ -1,17 +1,12 @@
 import { NavLink } from "react-router-dom";
 import BurgerBtn from "./BurgerBtn/BurgerBtn";
+
 import s from "./Navigation.module.css";
-import Modal from "../Modal/Modal";
-import { useState } from "react";
-import ModalList from "../Modal/ModalList/ModalList";
-import { TbArrowLeftRhombus, TbArrowRightRhombus } from "react-icons/tb";
 
-const Navigation = () => {
-  const [modalOpen, setModalOpen] = useState(false);
-
+const Navigation = ({ openModal }) => {
   return (
     <nav className={s.navigation}>
-      <BurgerBtn onClick={() => setModalOpen(true)} />
+      <BurgerBtn onClick={openModal} />
       <NavLink className={s.logo} to="/">
         Qitchen
       </NavLink>
@@ -26,15 +21,6 @@ const Navigation = () => {
           <NavLink to="./reservationPage">book a table</NavLink>
         </li>
       </ul>
-      {modalOpen && (
-        <Modal close={() => setModalOpen(false)}>
-          <div className={s.decor}>
-            <TbArrowLeftRhombus className={s.icon} />
-            <TbArrowRightRhombus className={s.icon} />
-          </div>
-          <ModalList close={() => setModalOpen(false)} />
-        </Modal>
-      )}
     </nav>
   );
 };

@@ -60,13 +60,6 @@
   color: var(--text-default);
   text-transform: uppercase;
 }
-.decor {
-  text-align: center;
-}
-.icon {
-  color: var(--text-default);
-  transform: scale(5, 1.5);
-}
 
 @media (min-width: 1280px) {
   .navigation {

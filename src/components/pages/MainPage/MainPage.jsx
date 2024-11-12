@@ -1,8 +1,8 @@
-import clsx from "clsx";
-import s from "./MainPage.module.css";
-import Socials from "./Socials/Socials";
-import SideBar from "./SideBar/SideBar";
+import Socials from "../../shared/Socials/Socials";
+import SideBar from "../../SideBar/SideBar";
 import { useEffect } from "react";
+
+import s from "./MainPage.module.css";
 
 const MainPage = () => {
   useEffect(() => {
