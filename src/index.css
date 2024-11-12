@@ -57,3 +57,14 @@ a {
 .maplibregl-control-container {
   display: none;
 }
+/* TOASTER STYLES */
+
+.toast {
+  border: 5px solid var(--background-primary);
+  text-align: start;
+  font-size: 16px;
+}
+.toast-link {
+  text-decoration: underline;
+  color: var(--text-muted);
+}

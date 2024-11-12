@@ -1,5 +1,5 @@
 import { Routes, Route } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { TbArrowLeftRhombus, TbArrowRightRhombus } from "react-icons/tb";
 import MainPage from "./components/pages/MainPage/MainPage";
 
@@ -13,18 +13,59 @@ import "./App.css";
 import Modal from "./components/Modal/Modal";
 import ModalList from "./components/Modal/ModalList/ModalList";
 import MenuPage from "./components/pages/MenuPage/MenuPage";
+import toast from "react-hot-toast";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
+  const [isClickedLink, setIsClickedLink] = useState(false);
+  useEffect(() => {
+    if (isClickedLink) {
+      toast(
+        <span>
+          This is a demo version of the site. There are no active links to
+          social networks. But you can always view the
+          <a
+            className="toast-link"
+            href="https://eevgenk.github.io/Portfolio/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            developer's portfolio
+          </a>
+        </span>
+      );
+    }
+    return () => {
+      setIsClickedLink(false);
+    };
+  }, [isClickedLink]);
   return (
     <div className="app">
       <Navigation openModal={() => setModalOpen(true)} />
       <Routes>
-        <Route path="/" element={<MainPage />} />
+        <Route
+          path="/"
+          element={
+            <MainPage
+              onClick={() => {
+                setIsClickedLink(true);
+              }}
+            />
+          }
+        />
         <Route path="/menuPage" element={<MenuPage />} />
         <Route path="/reservationPage" element={<ReservationPage />} />
         <Route path="/aboutPage" element={<About />} />
-        <Route path="/contactsPage" element={<Contacts />} />
+        <Route
+          path="/contactsPage"
+          element={
+            <Contacts
+              onClick={() => {
+                setIsClickedLink(true);
+              }}
+            />
+          }
+        />
       </Routes>
       {modalOpen && (
         <Modal close={() => setModalOpen(false)}>

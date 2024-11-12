@@ -4,10 +4,11 @@ import { useEffect } from "react";
 
 import s from "./MainPage.module.css";
 
-const MainPage = () => {
+const MainPage = ({ onClick }) => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div className={s.section}>
       <div className={s.heroContainer}>
@@ -15,7 +16,7 @@ const MainPage = () => {
           Sushi <br />
           Sensation
         </h1>
-        <Socials />
+        <Socials onClick={onClick} />
       </div>
       <SideBar />
     </div>

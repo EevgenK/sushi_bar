@@ -16,10 +16,13 @@ import Footer from "../../../Footer/Footer";
 import ContactWrapper from "../../../ContactWrapper/ContactWrapper";
 import { getMapApi } from "../../../../helpers/getMapApi";
 import Socials from "../../../shared/Socials/Socials";
+import Loader from "../../../Loader/Loader";
 
-const Contacts = () => {
+const Contacts = ({ onClick }) => {
   const [map, setMap] = useState();
   const [workingHours, setWorkingHours] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isError, setIsError] = useState(false);
 
   useEffect(() => {
     fetch("./workHours.json")
@@ -30,10 +33,14 @@ const Contacts = () => {
   useEffect(() => {
     const getMap = async () => {
       try {
+        setIsLoading(true);
         const { data } = await getMapApi();
         setMap(data);
       } catch (error) {
-        console.log("Помилка:", error);
+        console.log("Error appeared:", error);
+        setIsError(true);
+      } finally {
+        setIsLoading(false);
       }
     };
     getMap();
@@ -54,22 +61,26 @@ const Contacts = () => {
           secondEl={
             <WorkingHoursList
               items={data}
-              links={<Socials style="contacts" />}
+              links={<Socials style="contacts" onClick={onClick} />}
             />
           }
           thirdEl={
-            <Map
-              initialViewState={{
-                longitude: 30.523333,
-                latitude: 50.450001,
-                zoom: 14,
-              }}
-              style={{
-                width: "100%",
-                height: 400,
-              }}
-              mapStyle={map}
-            />
+            isLoading ? (
+              <Loader />
+            ) : (
+              <Map
+                initialViewState={{
+                  longitude: 30.523333,
+                  latitude: 50.450001,
+                  zoom: 14,
+                }}
+                style={{
+                  width: "100%",
+                  height: 400,
+                }}
+                mapStyle={map}
+              />
+            )
           }
         />
 
