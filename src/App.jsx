@@ -23,7 +23,7 @@ function App() {
       toast(
         <span>
           This is a demo version of the site. There are no active links to
-          social networks. But you can always view the
+          social networks. But you can always view the{" "}
           <a
             className="toast-link"
             href="https://eevgenk.github.io/Portfolio/"

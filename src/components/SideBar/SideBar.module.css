@@ -81,7 +81,7 @@
 }
 .btn::before {
   content: "";
-  background-image: url(../../../assets/img/rounded_conor.svg);
+  background-image: url(../../assets/img/rounded_conor.svg);
   position: absolute;
   width: 24px;
   height: 24px;
@@ -90,7 +90,7 @@
 }
 .btn::after {
   content: "";
-  background-image: url(../../../assets/img/rounded_conor.svg);
+  background-image: url(../../assets/img/rounded_conor.svg);
   position: absolute;
   width: 24px;
   height: 24px;
@@ -116,14 +116,14 @@
         rgba(47, 48, 58, 0.6),
         rgba(47, 48, 58, 0.6)
       ),
-      url(../../../assets/img/menu_img2x.jpg);
+      url(../../assets/img/menu_img2x.jpg);
     &:hover,
     &:focus {
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../../assets/img/menu_img2x.jpg);
+        url(../../assets/img/menu_img2x.jpg);
     }
   }
   .item:nth-child(2) {
@@ -131,14 +131,14 @@
         rgba(47, 48, 58, 0.6),
         rgba(47, 48, 58, 0.6)
       ),
-      url(../../../assets/img/reservation_img2x.jpg);
+      url(../../assets/img/reservation_img2x.jpg);
     &:hover,
     &:focus {
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../../assets/img/reservation_img2x.jpg);
+        url(../../assets/img/reservation_img2x.jpg);
     }
   }
   .item:nth-child(3) {
@@ -146,14 +146,14 @@
         rgba(47, 48, 58, 0.6),
         rgba(47, 48, 58, 0.6)
       ),
-      url(../../../assets/img/restaurant_img2x.jpg);
+      url(../../assets/img/restaurant_img2x.jpg);
     &:hover,
     &:focus {
       background-image: linear-gradient(
           rgba(47, 48, 58, 0.4),
           rgba(47, 48, 58, 0.4)
         ),
-        url(../../../assets/img/restaurant_img2x.jpg);
+        url(../../assets/img/restaurant_img2x.jpg);
     }
   }
 }
