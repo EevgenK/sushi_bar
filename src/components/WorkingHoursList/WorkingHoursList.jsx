@@ -1,6 +1,9 @@
 import s from "./WorkingHoursList.module.css";
 
-const WorkingHoursList = ({ items }) => {
+const WorkingHoursList = ({ items, links: Element }) => {
+  if (Element) {
+    items[3] = { Follows: Element };
+  }
   return (
     <ul className={s.list}>
       {items.map((item, index) => (

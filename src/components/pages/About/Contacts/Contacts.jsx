@@ -15,6 +15,7 @@ import Map from "react-map-gl/maplibre";
 import Footer from "../../../Footer/Footer";
 import ContactWrapper from "../../../ContactWrapper/ContactWrapper";
 import { getMapApi } from "../../../../helpers/getMapApi";
+import Socials from "../../../shared/Socials/Socials";
 
 const Contacts = () => {
   const [map, setMap] = useState();
@@ -50,7 +51,12 @@ const Contacts = () => {
           style="reversed"
           secondStyle="map"
           fristEl={<MenuTitle style="contacts" text="Get in touch" />}
-          secondEl={<WorkingHoursList items={data} />}
+          secondEl={
+            <WorkingHoursList
+              items={data}
+              links={<Socials style="contacts" />}
+            />
+          }
           thirdEl={
             <Map
               initialViewState={{
