@@ -14,11 +14,11 @@ import WorkingHoursList from "../../../WorkingHoursList/WorkingHoursList";
 import Map from "react-map-gl/maplibre";
 import Footer from "../../../Footer/Footer";
 import ContactWrapper from "../../../ContactWrapper/ContactWrapper";
+import { getMapApi } from "../../../../helpers/getMapApi";
 
 const Contacts = () => {
   const [map, setMap] = useState();
   const [workingHours, setWorkingHours] = useState([]);
-  const API_KEY = import.meta.env.VITE_API_KEY;
 
   useEffect(() => {
     fetch("./workHours.json")
@@ -29,9 +29,7 @@ const Contacts = () => {
   useEffect(() => {
     const getMap = async () => {
       try {
-        const data = await fetch(
-          `https://api.maptiler.com/maps/toner-v2/style.json?key=${API_KEY}`
-        ).then((response) => response.json());
+        const { data } = await getMapApi();
         setMap(data);
       } catch (error) {
         console.log("Помилка:", error);
