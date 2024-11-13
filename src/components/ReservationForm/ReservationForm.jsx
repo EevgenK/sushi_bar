@@ -115,8 +115,31 @@ const ReservationForm = ({ getInfo }) => {
                   timeFormat="HH:mm"
                   placeholderText="Choose time"
                   className={s.time}
-                  minTime={new Date().setHours(9, 0)}
-                  maxTime={new Date().setHours(23, 30)}
+                  calendarClassName="time-box"
+                  minTime={new Date(new Date().setHours(9, 0, 0, 0))}
+                  maxTime={new Date(new Date().setHours(23, 30, 0, 0))}
+                  renderCustomHeader={({
+                    date,
+                    decreaseMonth,
+                    increaseMonth,
+                  }) => (
+                    <div
+                      style={{
+                        display: "flex",
+                        justifyContent: "space-between",
+                        padding: "100px",
+                      }}
+                    >
+                      <button onClick={decreaseMonth}>{"<"}</button>
+                      <span>
+                        {date.toLocaleDateString("en-US", {
+                          month: "long",
+                          year: "numeric",
+                        })}
+                      </span>
+                      <button onClick={increaseMonth}>{">"}</button>
+                    </div>
+                  )}
                 />
               )}
             </Field>

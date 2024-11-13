@@ -10,12 +10,11 @@ const timeToMinutes = (time) => {
   return hours * 60 + minutes;
 };
 
-// Схема валідації Yup
-
 const today = new Date();
 today.setHours(0, 0, 0, 0);
 const regMail =
   /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+
 const ReservationSchema = Yup.object().shape({
   clientname: Yup.string()
     .min(3, "Too Short!")

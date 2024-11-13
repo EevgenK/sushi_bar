@@ -30,21 +30,21 @@ const Contacts = ({ onClick }) => {
       .then((data) => setWorkingHours(data.working_hours))
       .catch((error) => console.error("Error fetching the data:", error));
   }, []);
-  useEffect(() => {
-    const getMap = async () => {
-      try {
-        setIsLoading(true);
-        const { data } = await getMapApi();
-        setMap(data);
-      } catch (error) {
-        console.log("Error appeared:", error);
-        setIsError(true);
-      } finally {
-        setIsLoading(false);
-      }
-    };
-    getMap();
-  }, []);
+  // useEffect(() => {
+  //   const getMap = async () => {
+  //     try {
+  //       setIsLoading(true);
+  //       const { data } = await getMapApi();
+  //       setMap(data);
+  //     } catch (error) {
+  //       console.log("Error appeared:", error);
+  //       setIsError(true);
+  //     } finally {
+  //       setIsLoading(false);
+  //     }
+  //   };
+  //   getMap();
+  // }, []);
   return (
     <section className={clsx("section", s.menu)}>
       <MenuHero page="contacts" title="contacts" />

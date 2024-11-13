@@ -1,5 +1,6 @@
 .calendar {
   background-color: var(--background-muted);
+  width: 300px;
 }
 .calendar .react-datepicker__header {
   background-color: var(--background-primary);
@@ -15,4 +16,31 @@
 .calendar .react-datepicker__day:hover {
   background-color: var(--text-muted);
   color: var(--text-inverse);
+}
+/* TIME-BOX */
+.time-box {
+  width: 300px;
+  background-color: var(--background-muted);
+  display: flex;
+  justify-content: center;
+}
+.time-box .react-datepicker__header--time {
+  background-color: var(--background-primary);
+}
+.time-box .react-datepicker__time-container,
+.calendar .react-datepicker__month-container,
+.time-box .react-datepicker__time > .react-datepicker__time-box {
+  width: 100%;
+}
+.time-box .react-datepicker__time {
+  background-color: var(--background-muted);
+  color: var(--text-default);
+}
+
+.time-box .react-datepicker__time-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.time-box .react-datepicker__time-list-item--disabled {
+  display: none;
 }
