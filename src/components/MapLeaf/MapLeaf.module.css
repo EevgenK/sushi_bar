@@ -1,0 +1,14 @@
+.map {
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: grab;
+  height: 400px;
+}
+.icon {
+  fill: var(--text-default);
+}
+@media (min-width: 1280px) {
+  .map {
+    height: 100%;
+  }
+}

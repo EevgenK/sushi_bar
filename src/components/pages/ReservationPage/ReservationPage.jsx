@@ -33,6 +33,7 @@ const ReservationPage = () => {
           </Paragraph>
           <ReservationForm getInfo={setOrder} />
         </WrapperBox>
+        <Footer />
         {modalOpen && (
           <Modal close={() => setModalOpen(false)}>
             <div className={s.decor}>
@@ -49,7 +50,6 @@ const ReservationPage = () => {
             </div>
           </Modal>
         )}
-        <Footer />
       </div>
     </section>
   );

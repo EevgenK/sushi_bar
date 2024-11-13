@@ -39,11 +39,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.map {
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: grab;
-}
+
 @media (min-width: 1280px) {
   .menu {
     display: flex;

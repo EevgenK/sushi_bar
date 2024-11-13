@@ -1,6 +1,7 @@
 .wrapper {
   margin-top: 16px;
   width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   gap: 16px;
@@ -14,6 +15,7 @@
 .second {
   border-radius: 16px;
   width: 100%;
+
   @media (min-width: 1280px) {
   }
 }
@@ -27,11 +29,7 @@
   flex-direction: column;
   justify-content: space-around;
 }
-.map {
-  border-radius: 16px;
-  overflow: hidden;
-  cursor: grab;
-}
+
 @media (min-width: 1280px) {
   .wrapper {
     flex-direction: row;

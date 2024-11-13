@@ -1,8 +1,15 @@
 import * as Yup from "yup";
+import data from "../../public/workHours.json";
 
-const OPENING_TIME = 16 * 60; // 960 хвилин (16:00)
-const CLOSING_TIME = 22 * 60 + 30; // 1350 хвилин (22:30)
+const timeToSeconds = (time) => {
+  const hours = Math.floor(time);
+  const minutes = Math.round((time - hours) * 100);
+  return hours * 60 + minutes;
+};
 
+const OPENING_TIME = timeToSeconds(data.hours.open); // 960 хвилин (16:00)
+const CLOSING_TIME = timeToSeconds(data.hours.close) - 30; // 1350 хвилин (22:30) -30 хвили до зачиненння
+console.log(CLOSING_TIME);
 // Функція для конвертації часу у хвилини
 const timeToMinutes = (time) => {
   if (!time) return null;
