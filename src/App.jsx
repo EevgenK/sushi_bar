@@ -1,19 +1,22 @@
 import { Routes, Route } from "react-router-dom";
-import { useEffect, useState } from "react";
+import { lazy, Suspense, useEffect, useState } from "react";
 import { TbArrowLeftRhombus, TbArrowRightRhombus } from "react-icons/tb";
-import MainPage from "./components/pages/MainPage/MainPage";
-
 import Navigation from "./components/Navigation/Navigation";
-import ReservationPage from "./components/pages/ReservationPage/ReservationPage";
-import About from "./components/pages/About/About";
-import Contacts from "./components/pages/About/Contacts/Contacts";
+import Modal from "./components/Modal/Modal";
+import ModalList from "./components/Modal/ModalList/ModalList";
+
+import toast from "react-hot-toast";
+
+const MainPage = lazy(() => import("./pages/MainPage/MainPage"));
+const ReservationPage = lazy(() =>
+  import("./pages/ReservationPage/ReservationPage")
+);
+const About = lazy(() => import("./pages/About/About"));
+const MenuPage = lazy(() => import("./pages/MenuPage/MenuPage"));
+const Contacts = lazy(() => import("./pages/Contacts/Contacts"));
 
 import "modern-normalize";
 import "./App.css";
-import Modal from "./components/Modal/Modal";
-import ModalList from "./components/Modal/ModalList/ModalList";
-import MenuPage from "./components/pages/MenuPage/MenuPage";
-import toast from "react-hot-toast";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -42,31 +45,33 @@ function App() {
   return (
     <div className="app">
       <Navigation openModal={() => setModalOpen(true)} />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <MainPage
-              onClick={() => {
-                setIsClickedLink(true);
-              }}
-            />
-          }
-        />
-        <Route path="/menuPage" element={<MenuPage />} />
-        <Route path="/reservationPage" element={<ReservationPage />} />
-        <Route path="/aboutPage" element={<About />} />
-        <Route
-          path="/contactsPage"
-          element={
-            <Contacts
-              onClick={() => {
-                setIsClickedLink(true);
-              }}
-            />
-          }
-        />
-      </Routes>
+      <Suspense>
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <MainPage
+                onClick={() => {
+                  setIsClickedLink(true);
+                }}
+              />
+            }
+          />
+          <Route path="/menuPage" element={<MenuPage />} />
+          <Route path="/reservationPage" element={<ReservationPage />} />
+          <Route path="/aboutPage" element={<About />} />
+          <Route
+            path="/contactsPage"
+            element={
+              <Contacts
+                onClick={() => {
+                  setIsClickedLink(true);
+                }}
+              />
+            }
+          />
+        </Routes>
+      </Suspense>
       {modalOpen && (
         <Modal close={() => setModalOpen(false)}>
           <div className="decor">

@@ -1,12 +1,12 @@
 import clsx from "clsx";
 import { useEffect, useState } from "react";
-import MenuHero from "../../MenuHero/MenuHero";
-import ReservationForm from "../../ReservationForm/ReservationForm";
-import MenuTitle from "../../MenuTitle/MenuTitle";
-import Paragraph from "../../shared/Paragraph/Paragraph";
-import Modal from "../../Modal/Modal";
-import Footer from "../../Footer/Footer";
-import WrapperBox from "../../shared/WrapperBox/WrapperBox";
+import MenuHero from "../../components/MenuHero/MenuHero";
+import ReservationForm from "../../components/ReservationForm/ReservationForm";
+import MenuTitle from "../../components/MenuTitle/MenuTitle";
+import Paragraph from "../../components/shared/Paragraph/Paragraph";
+import Modal from "../../components/Modal/Modal";
+import Footer from "../../components/Footer/Footer";
+import WrapperBox from "../../components/shared/WrapperBox/WrapperBox";
 import s from "./ReservationPage.module.css";
 
 const ReservationPage = () => {

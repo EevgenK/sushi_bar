@@ -1,13 +1,13 @@
 import clsx from "clsx";
 
 import { useEffect } from "react";
-import { maki, rolls, uramaki } from "../../../assets/data/menu";
-import MenuHero from "../../MenuHero/MenuHero";
-import WrapperBox from "../../shared/WrapperBox/WrapperBox";
-import MenuNavigation from "../../MenuNavigation/MenuNavigation";
-import MenuTitle from "../../MenuTitle/MenuTitle";
-import MenuList from "../../MenuList/MenuList";
-import Footer from "../../Footer/Footer";
+import { maki, rolls, uramaki } from "../../assets/data/menu";
+import MenuHero from "../../components/MenuHero/MenuHero";
+import WrapperBox from "../../components/shared/WrapperBox/WrapperBox";
+import MenuNavigation from "../../components/MenuNavigation/MenuNavigation";
+import MenuTitle from "../../components/MenuTitle/MenuTitle";
+import MenuList from "../../components/MenuList/MenuList";
+import Footer from "../../components/Footer/Footer";
 import s from "./MenuPage.module.css";
 
 const MenuPage = () => {

@@ -1,11 +1,12 @@
-import MenuHero from "../../MenuHero/MenuHero";
-import imgFirst from "../../../assets/img/about_img.jpg";
-import imgSecond from "../../../assets/img/story_img.jpg";
-import ContentBox from "../../shared/ContentBox/ContentBox";
-import ProjectsList from "../../shared/ProjectsList/ProjectsList";
+import imgFirst from "../../assets/img/about_img.jpg";
+import imgSecond from "../../assets/img/story_img.jpg";
+import ContentBox from "../../components/shared/ContentBox/ContentBox";
+import ProjectsList from "../../components/shared/ProjectsList/ProjectsList";
+import MenuHero from "../../components/MenuHero/MenuHero";
+import Footer from "../../components/Footer/Footer";
+
 import clsx from "clsx";
 import s from "./About.module.css";
-import Footer from "../../Footer/Footer";
 
 const About = () => {
   return (

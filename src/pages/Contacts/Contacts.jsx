@@ -1,17 +1,18 @@
 import { useEffect, useState } from "react";
+
+import MenuHero from "../../components/MenuHero/MenuHero";
+import MenuTitle from "../../components/MenuTitle/MenuTitle";
+import { dishImages } from "../../assets/img/contacts/contacts";
+import ImageLink from "../../components/shared/ImageLink/ImageLink";
+import data from "../../assets/data/contacts.json";
+import List from "../../components/shared/List/List";
+import WorkingHoursList from "../../components/WorkingHoursList/WorkingHoursList";
+import Footer from "../../components/Footer/Footer";
+import ContactWrapper from "../../components/ContactWrapper/ContactWrapper";
+import Socials from "../../components/shared/Socials/Socials";
+import Loader from "../../components/Loader/Loader";
+import MapLeaf from "../../components/MapLeaf/MapLeaf";
 import clsx from "clsx";
-import MenuHero from "../../../MenuHero/MenuHero";
-import MenuTitle from "../../../MenuTitle/MenuTitle";
-import { dishImages } from "../../../../assets/img/contacts/contacts";
-import ImageLink from "../../../shared/ImageLink/ImageLink";
-import data from "../../../../assets/data/contacts.json";
-import List from "../../../shared/List/List";
-import WorkingHoursList from "../../../WorkingHoursList/WorkingHoursList";
-import Footer from "../../../Footer/Footer";
-import ContactWrapper from "../../../ContactWrapper/ContactWrapper";
-import Socials from "../../../shared/Socials/Socials";
-import Loader from "../../../Loader/Loader";
-import MapLeaf from "../../../MapLeaf/MapLeaf";
 import s from "./Contacts.module.css";
 
 const Contacts = ({ onClick }) => {

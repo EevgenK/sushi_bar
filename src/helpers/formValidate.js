@@ -9,7 +9,7 @@ const timeToSeconds = (time) => {
 
 const OPENING_TIME = timeToSeconds(data.hours.open); // 960 хвилин (16:00)
 const CLOSING_TIME = timeToSeconds(data.hours.close) - 30; // 1350 хвилин (22:30) -30 хвили до зачиненння
-console.log(CLOSING_TIME);
+
 // Функція для конвертації часу у хвилини
 const timeToMinutes = (time) => {
   if (!time) return null;

@@ -1,6 +1,6 @@
-import Socials from "../../shared/Socials/Socials";
-import SideBar from "../../SideBar/SideBar";
 import { useEffect } from "react";
+import Socials from "../../components/shared/Socials/Socials";
+import SideBar from "../../components/SideBar/SideBar";
 
 import s from "./MainPage.module.css";
 
@@ -10,7 +10,7 @@ const MainPage = ({ onClick }) => {
   }, []);
 
   return (
-    <div className={s.section}>
+    <main className={s.section}>
       <div className={s.heroContainer}>
         <h1 className={s.title}>
           Sushi <br />
@@ -19,7 +19,7 @@ const MainPage = ({ onClick }) => {
         <Socials onClick={onClick} />
       </div>
       <SideBar />
-    </div>
+    </main>
   );
 };
 
