@@ -17,6 +17,7 @@ const Contacts = lazy(() => import("./pages/Contacts/Contacts"));
 
 import "modern-normalize";
 import "./App.css";
+import Loader from "./components/Loader/Loader";
 
 function App() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -45,7 +46,7 @@ function App() {
   return (
     <div className="app">
       <Navigation openModal={() => setModalOpen(true)} />
-      <Suspense>
+      <Suspense fallback={<Loader />}>
         <Routes>
           <Route
             path="/"
